@@ -18,7 +18,7 @@ function Projects(props) {
   const [doorman, setDoorman] = useState(false);
 
   const [ref, inView] = useInView({
-    threshold: 0
+    threshold: 0,
   });
 
   return (
@@ -30,16 +30,16 @@ function Projects(props) {
 
       <Project style={{ backgroundImage: `url(${TrainingBotPic})` }}>
         <HoverProject
-          onMouseEnter={e => setTrainingBot(true)}
-          onMouseLeave={e => setTrainingBot(false)}
+          onMouseEnter={(e) => setTrainingBot(true)}
+          onMouseLeave={(e) => setTrainingBot(false)}
           className={trainingBot ? styles.popoverHover : styles.popoverHoverOut}
         >
           <p>Check it out!</p>
           <div>
             <button
-              onClick={e =>
+              onClick={(e) =>
                 window.open(
-                  "https://github.com/labs12-training-bot-2",
+                  "https://github.com/Tannerwill756/front-end",
                   "_blank"
                 )
               }
@@ -47,8 +47,8 @@ function Projects(props) {
               github
             </button>
             <button
-              onClick={e =>
-                window.open("https://training-bot-2.netlify.com/", "_blank")
+              onClick={(e) =>
+                window.open("https://expat-journal-bw.vercel.app/", "_blank")
               }
             >
               live site
@@ -57,23 +57,27 @@ function Projects(props) {
         </HoverProject>
         <ProjectCover>
           <div>
-            <h3>Training Bot</h3>
+            <h3>Expat Journal</h3>
             <p>
-              An application that utilizes Twillio, Sendgrid, and the Slack API
-              to allow managers to distribute training materials to employees.
+              An application that utilizes Redux for the front end and Node JS
+              for the backend to allow users to see others posts and post about
+              journey's they are on.
             </p>
           </div>
         </ProjectCover>
       </Project>
       <ProjectDiscription>
         <p>
-          Training Bot was the capstone project for Lambda Schools main
-          curriculum that I built. I worked with four other Lambda Students and
-          took over this project to expand its features over the course of 5
-          weeks. Technologies used include: React/Redux, Node.js/Express,
-          PostgreSQL, Stripe/Twilio/SendGrid/Slack API, Auth0, and Material UI.
-          I assisted in the entire stack by implementing features on both the
-          front and back end, conducted user testing, and more.
+          Expat Journal was initially built in 1 week with a group of 5 students
+          from Lambda School, all at different portions in the school. My roll
+          was the lead Front End developer, working with 2 others Front End
+          students as well as constant communication with the Back End team. We
+          reached our goals for the week and were super happy with how it turned
+          out. As I wanted to show off this project on my portfolio website, I
+          cloned the project and continued working on it in my free time.
+          Technologies used include: React/Redux, Node.js/Express, and
+          PostgreSQL. I assisted in the entire stack by implementing features on
+          both the front and back end.
         </p>
         <MobileLinks>
           <p>
@@ -101,14 +105,14 @@ function Projects(props) {
 
       <Project style={{ backgroundImage: `url(${TipEasePic})` }}>
         <HoverProject
-          onMouseEnter={e => setTipEase(true)}
-          onMouseLeave={e => setTipEase(false)}
+          onMouseEnter={(e) => setTipEase(true)}
+          onMouseLeave={(e) => setTipEase(false)}
           className={tipEase ? styles.popoverHover : styles.popoverHoverOut}
         >
           <p>Check it out!</p>
           <div>
             <button
-              onClick={e =>
+              onClick={(e) =>
                 window.open(
                   "https://github.com/lambda-build-tipsease",
                   "_blank"
@@ -118,7 +122,7 @@ function Projects(props) {
               github
             </button>
             <button
-              onClick={e =>
+              onClick={(e) =>
                 window.open("https://tipease.netlify.com/", "_blank")
               }
             >
@@ -173,21 +177,21 @@ function Projects(props) {
       {/* new proj */}
       <Project style={{ backgroundImage: `url(${Portfolio})` }}>
         <HoverProject
-          onMouseEnter={e => setDoorman(true)}
-          onMouseLeave={e => setDoorman(false)}
+          onMouseEnter={(e) => setDoorman(true)}
+          onMouseLeave={(e) => setDoorman(false)}
           className={doorman ? styles.popoverHover : styles.popoverHoverOut}
         >
           <p>Check it out!</p>
           <div>
             <button
-              onClick={e =>
+              onClick={(e) =>
                 window.open("https://github.com/notwrong/doorman", "_blank")
               }
             >
               github
             </button>
             <button
-              onClick={e =>
+              onClick={(e) =>
                 window.open("https://doorman.notwrong.dev/", "_blank")
               }
             >
@@ -236,14 +240,14 @@ function Projects(props) {
 
       <Project style={{ backgroundImage: `url(${AppraisersBFF})` }}>
         <HoverProject
-          onMouseEnter={e => setAppBff(true)}
-          onMouseLeave={e => setAppBff(false)}
+          onMouseEnter={(e) => setAppBff(true)}
+          onMouseLeave={(e) => setAppBff(false)}
           className={appBff ? styles.popoverHover : styles.popoverHoverOut}
         >
           <p>Check it out!</p>
           <div>
             <button
-              onClick={e =>
+              onClick={(e) =>
                 window.open(
                   "https://github.com/appraiserbff-lambda-build-week",
                   "_blank"
@@ -292,14 +296,14 @@ function Projects(props) {
 
       <Project style={{ backgroundImage: `url(${Portfolio})` }}>
         <HoverProject
-          onMouseEnter={e => setPorfolio(true)}
-          onMouseLeave={e => setPorfolio(false)}
+          onMouseEnter={(e) => setPorfolio(true)}
+          onMouseLeave={(e) => setPorfolio(false)}
           className={portfolio ? styles.popoverHover : styles.popoverHoverOut}
         >
           <p>Check it out!</p>
           <div>
             <button
-              onClick={e =>
+              onClick={(e) =>
                 window.open(
                   "https://github.com/TomHessburg/My-Portfolio",
                   "_blank"

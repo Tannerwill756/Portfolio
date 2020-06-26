@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 //import Typist from "react-typist";
-import BackgroundImg from "../images/baron14.jpg";
+import BackgroundImg from "../images/Profile-Pic.jpg";
 import styled from "styled-components";
 import Parallax from "react-rellax";
 import Particles from "react-particles-js";
@@ -12,26 +12,26 @@ const particlesOptions = {
       value: 52,
       density: {
         enable: true,
-        value_area: 2000
-      }
+        value_area: 2000,
+      },
     },
     color: {
-      value: "#ffffff"
+      value: "#ffffff",
     },
     shape: {
       type: "circle",
       stroke: {
         width: 1,
-        color: "#bbbbbb"
+        color: "#bbbbbb",
       },
       polygon: {
-        nb_sides: 5
+        nb_sides: 5,
       },
       image: {
         src: "img/github.svg",
         width: 100,
-        height: 100
-      }
+        height: 100,
+      },
     },
     opacity: {
       value: 0.5,
@@ -40,8 +40,8 @@ const particlesOptions = {
         enable: false,
         speed: 1,
         opacity_min: 0.1,
-        sync: false
-      }
+        sync: false,
+      },
     },
     size: {
       value: 2.891476416322726,
@@ -50,15 +50,15 @@ const particlesOptions = {
         enable: false,
         speed: 40,
         size_min: 0.1,
-        sync: false
-      }
+        sync: false,
+      },
     },
     line_linked: {
       enable: true,
       distance: 150,
       color: "#ffffff",
       opacity: 0.1,
-      width: 1
+      width: 1,
     },
     move: {
       enable: true,
@@ -71,50 +71,50 @@ const particlesOptions = {
       attract: {
         enable: false,
         rotateX: 600,
-        rotateY: 1200
-      }
-    }
+        rotateY: 1200,
+      },
+    },
   },
   interactivity: {
     detect_on: "canvas",
     events: {
       onhover: {
         enable: true,
-        mode: "bubble"
+        mode: "bubble",
       },
       onclick: {
         enable: true,
-        mode: "push"
+        mode: "push",
       },
-      resize: true
+      resize: true,
     },
     modes: {
       grab: {
         distance: 400,
         line_linked: {
-          opacity: 1
-        }
+          opacity: 1,
+        },
       },
       bubble: {
         distance: 400,
         size: 0,
         duration: 2,
         opacity: 8,
-        speed: 3
+        speed: 3,
       },
       repulse: {
         distance: 200,
-        duration: 0.4
+        duration: 0.4,
       },
       push: {
-        particles_nb: 4
+        particles_nb: 4,
       },
       remove: {
-        particles_nb: 2
-      }
-    }
+        particles_nb: 2,
+      },
+    },
   },
-  retina_detect: true
+  retina_detect: true,
 };
 
 export default function HeroSection() {
@@ -124,7 +124,7 @@ export default function HeroSection() {
     <Parallax speed={2}>
       <HeroWrapper>
         <Hero>
-          <h1>Thomas Hessburg</h1>
+          <h1>Tanner Williams</h1>
           <h2>
             <span>Full Stack</span> Web Developer
           </h2>
@@ -136,7 +136,7 @@ export default function HeroSection() {
             hidden={hidden}
           >
             <button
-              onClick={e => {
+              onClick={(e) => {
                 e.stopPropagation();
                 setHidden(true);
                 setTimeout(() => {
@@ -145,12 +145,12 @@ export default function HeroSection() {
                       ? {
                           top: window.innerHeight * 2 + 700,
                           left: 0,
-                          behavior: "smooth"
+                          behavior: "smooth",
                         }
                       : {
                           top: window.innerHeight * 3 + 800,
                           left: 0,
-                          behavior: "smooth"
+                          behavior: "smooth",
                         }
                   );
                 }, 100);
@@ -168,21 +168,21 @@ export default function HeroSection() {
       </HeroWrapper>
       <Socials>
         <a
-          href="https://github.com/TomHessburg"
+          href="https://github.com/Tannerwill756"
           rel="noopener noreferrer"
           target="_blank"
         >
           <i className="fab fa-github" />
         </a>
         <a
-          href="https://www.linkedin.com/in/thomas-hessburg/"
+          href="https://www.linkedin.com/in/tanner-m-williams/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i className="fab fa-linkedin" />
         </a>
         <a
-          href="https://twitter.com/HessburgThomas"
+          href="https://twitter.com/TannerMWilliams"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -203,8 +203,8 @@ export default function HeroSection() {
           <i className="fab fa-facebook-square" />
         </a> */}
         <i
-          onClick={e => {
-            window.location.href = "mailto:thomas.hessburg@gmail.com";
+          onClick={(e) => {
+            window.location.href = "mailto:Tannerwill756@gmail.com";
           }}
           className="fas fa-envelope-open"
         />

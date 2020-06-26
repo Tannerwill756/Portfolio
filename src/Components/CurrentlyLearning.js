@@ -5,7 +5,7 @@ import styles from "./HoverFx.module.scss";
 
 function CurrentlyLearning() {
   const [ref, inView] = useInView({
-    threshold: 0
+    threshold: 0,
   });
 
   return (
@@ -15,7 +15,6 @@ function CurrentlyLearning() {
       </h2>
       <div className={inView ? styles.fadeInText : styles.fadeOutText}>
         <ul ref={ref}>
-          <li>GraphQL</li>
           <li>AWS</li>
           <li>Advanced Node JS Concepts</li>
           <li>Python</li>

@@ -17,10 +17,10 @@ export default function AboutMe() {
 
   //ref for page position
   const [ref, inView] = useInView({
-    threshold: 0
+    threshold: 0,
   });
   const [textRef, texInView] = useInView({
-    threshold: 0
+    threshold: 0,
   });
 
   return (
@@ -45,23 +45,23 @@ export default function AboutMe() {
               className={texInView ? styles.fadeInText : styles.fadeOutText}
               style={{ fontWeight: 400 }}
             >
-              <span>Hi, everyone!</span> <br /> <br /> My name is Thomas
-              Hessburg and I'm a full stack software developer from Orlando,
-              Florida. I love to create and I'm excited to learn and grow in the
-              tech field. <br />
+              <span>Hi, everyone!</span> <br /> <br /> My name is Tanner
+              Williams and I'm a full stack software developer from Hershey,
+              Pennsylvania. I love to create and I'm excited to learn and grow
+              in the tech field. <br />
               <br />
-              Over the past several years I've worked in two fields: as a
-              welder/fabricator all around the country, and for myself as an
-              audio engineer. As the latter, I wrote and mixed hundreds of songs
-              for bands and music groups. However, I've found my true passion in
+              Over the past few years I was working full time jobs while
+              attending college pursing a bachelor's degree in Mechanical
+              Engineering. I felt like I was running around in circles not
+              getting anywhere. However, that's when I found my true passion in
               learning to create software.
               <br />
-              <br /> I began my journey in mid-2018 with JavaScript by picking
+              <br /> I began my journey in late-2019 with JavaScript by picking
               up some books, courses, and anything else I could get my hands on.
-              I spent 12 hours a day trying to learn EVERYTHING that I possibly
+              I spent 6+ hours a day trying to learn EVERYTHING that I possibly
               could and accelerate my learning as much as possible. By early
-              2019, I began attending Lambda School (an online, fully immersive,
-              30+ week full stack bootcamp).
+              2020, I began attending Lambda School (an online, fully immersive,
+              9 month full stack school).
               <br />
               <br /> I can proudly say that after more than a half a year and
               1,000 hours of study, I'm ready to make my move into the
@@ -77,10 +77,10 @@ export default function AboutMe() {
               <h4>CSS</h4>
               <PopOver
                 className={css ? styles.popoverHover : styles.popoverHoverOut}
-                onMouseEnter={e => {
+                onMouseEnter={(e) => {
                   setCss(true);
                 }}
-                onMouseLeave={e => {
+                onMouseLeave={(e) => {
                   setCss(false);
                 }}
               >
@@ -92,10 +92,10 @@ export default function AboutMe() {
               <h4>HTML</h4>
               <PopOver
                 className={html ? styles.popoverHover : styles.popoverHoverOut}
-                onMouseEnter={e => {
+                onMouseEnter={(e) => {
                   setHtml(true);
                 }}
-                onMouseLeave={e => {
+                onMouseLeave={(e) => {
                   setHtml(false);
                 }}
               >
@@ -107,10 +107,10 @@ export default function AboutMe() {
               <h4>JavaScript</h4>
               <PopOver
                 className={js ? styles.popoverHover : styles.popoverHoverOut}
-                onMouseEnter={e => {
+                onMouseEnter={(e) => {
                   setJs(true);
                 }}
-                onMouseLeave={e => {
+                onMouseLeave={(e) => {
                   setJs(false);
                 }}
               >
@@ -122,10 +122,10 @@ export default function AboutMe() {
               <h4>React JS</h4>
               <PopOver
                 className={react ? styles.popoverHover : styles.popoverHoverOut}
-                onMouseEnter={e => {
+                onMouseEnter={(e) => {
                   setReact(true);
                 }}
-                onMouseLeave={e => {
+                onMouseLeave={(e) => {
                   setReact(false);
                 }}
               >
@@ -137,10 +137,10 @@ export default function AboutMe() {
               <h4>Node JS </h4>
               <PopOver
                 className={node ? styles.popoverHover : styles.popoverHoverOut}
-                onMouseEnter={e => {
+                onMouseEnter={(e) => {
                   setNode(true);
                 }}
-                onMouseLeave={e => {
+                onMouseLeave={(e) => {
                   setNode(false);
                 }}
               >
@@ -148,46 +148,14 @@ export default function AboutMe() {
               </PopOver>
             </TechnologyEven>
             <TechnologyOdd style={{ position: "relative" }}>
-              <i className="fas fa-drafting-compass" />
-              <h4>UI Design</h4>
-              <PopOver
-                className={
-                  uiDesign ? styles.popoverHover : styles.popoverHoverOut
-                }
-                onMouseEnter={e => {
-                  setUiDesign(true);
-                }}
-                onMouseLeave={e => {
-                  setUiDesign(false);
-                }}
-              >
-                <p>Building clean UI's is a passion of mine</p>
-              </PopOver>
-            </TechnologyOdd>
-            <TechnologyEven style={{ position: "relative" }}>
-              <i className="fab fa-adobe" />
-              <h4>Adobe</h4>
-              <PopOver
-                className={adobe ? styles.popoverHover : styles.popoverHoverOut}
-                onMouseEnter={e => {
-                  setAdobe(true);
-                }}
-                onMouseLeave={e => {
-                  setAdobe(false);
-                }}
-              >
-                <p>Able to work with design docs in Photoshop and XD</p>
-              </PopOver>
-            </TechnologyEven>
-            <TechnologyOdd style={{ position: "relative" }}>
               <i className="fab fa-github" />
               <h4>Git</h4>
               <PopOver
                 className={git ? styles.popoverHover : styles.popoverHoverOut}
-                onMouseEnter={e => {
+                onMouseEnter={(e) => {
                   setGit(true);
                 }}
-                onMouseLeave={e => {
+                onMouseLeave={(e) => {
                   setGit(false);
                 }}
               >

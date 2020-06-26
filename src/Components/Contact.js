@@ -19,10 +19,10 @@ export default function Contact() {
 
   //scroll ref hook
   const [ref, inView] = useInView({
-    threshold: 0
+    threshold: 0,
   });
 
-  const handelEmail = succeeded => {
+  const handelEmail = (succeeded) => {
     if (succeeded) {
       setSuccess(true);
     } else {
@@ -34,7 +34,7 @@ export default function Contact() {
     <ContactWrapper>
       {success && (
         <MsgSuccess
-          onClick={e => {
+          onClick={(e) => {
             setSuccess(false);
           }}
         >
@@ -44,7 +44,7 @@ export default function Contact() {
       )}
       {fail && (
         <MsgFail
-          onClick={e => {
+          onClick={(e) => {
             setFail(false);
           }}
         >
@@ -58,7 +58,7 @@ export default function Contact() {
       )}
       {incomplete && (
         <MsgIncomplete
-          onClick={e => {
+          onClick={(e) => {
             setIncomplete(false);
           }}
         >
@@ -77,7 +77,7 @@ export default function Contact() {
         <form
           ref={ref}
           className={inView ? styles.fadeInText : styles.fadeOutText}
-          onSubmit={e => {
+          onSubmit={(e) => {
             e.preventDefault();
             if (!name || !email || !content) {
               setIncomplete(true);
@@ -88,15 +88,16 @@ export default function Contact() {
               name,
               email,
               subject,
-              content
+              content,
             };
             axios
               .post(
-                `${process.env.REACT_APP_DB_URL ||
-                  "http://localhost:5000"}/api/send-email`,
+                `${
+                  process.env.REACT_APP_DB_URL || "http://localhost:5000"
+                }/api/send-email`,
                 newEmail
               )
-              .then(res => {
+              .then((res) => {
                 setContent("");
                 setSubject("");
                 setName("");
@@ -104,7 +105,7 @@ export default function Contact() {
 
                 handelEmail(true);
               })
-              .catch(err => handelEmail(false));
+              .catch((err) => handelEmail(false));
           }}
           type="submit"
         >
@@ -113,7 +114,7 @@ export default function Contact() {
           </label>
           <input
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             type="text"
             placeholder="name"
           />
@@ -123,7 +124,7 @@ export default function Contact() {
           </label>
           <input
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             type="text"
             placeholder="e-mail"
           />
@@ -131,7 +132,7 @@ export default function Contact() {
           <label>subject</label>
           <input
             value={subject}
-            onChange={e => setSubject(e.target.value)}
+            onChange={(e) => setSubject(e.target.value)}
             type="text"
             placeholder="subject"
           />
@@ -141,7 +142,7 @@ export default function Contact() {
           </label>
           <textarea
             value={content}
-            onChange={e => setContent(e.target.value)}
+            onChange={(e) => setContent(e.target.value)}
             type="text"
             placeholder="content"
           />
@@ -149,26 +150,26 @@ export default function Contact() {
           <button type="submit">Submit</button>
         </form>
       </ContactMe>
-      <p>email: thomas.hessburg@gmail.com</p>
-      <p>phone: (352)-636-5809</p>
+      <p>email: Tannerwill756@gmail.com</p>
+      <p>phone: (717)-856-6456</p>
       <p>
         LinkedIn:{" "}
         <a
-          href="https://www.linkedin.com/in/thomas-hessburg/"
+          href="https://www.linkedin.com/in/tanner-m-williams/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          https://www.linkedin.com/in/thomas-hessburg/
+          https://www.linkedin.com/in/tanner-m-williams/
         </a>
       </p>
       <p>
         GitHub:{" "}
         <a
-          href="https://github.com/TomHessburg/"
+          href="https://github.com/Tannerwill756/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          https://github.com/TomHessburg
+          https://github.com/Tannerwill756
         </a>
       </p>
     </ContactWrapper>
