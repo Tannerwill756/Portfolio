@@ -5,7 +5,7 @@ import styles from "./HoverFx.module.scss";
 import { useInView } from "react-intersection-observer";
 
 import BGImg from "../images/debut_light.png";
-import TrainingBotPic from "../images/trainingbot3.png";
+import expatPic from "../images/expat.PNG";
 import TipEasePic from "../images/tipeasepic.png";
 import AppraisersBFF from "../images/appbff2.png";
 import Portfolio from "../images/codeimage4.jpeg";
@@ -28,7 +28,7 @@ function Projects(props) {
       </h2>
       <hr style={{ marginBottom: "60px" }} />
 
-      <Project style={{ backgroundImage: `url(${TrainingBotPic})` }}>
+      <Project style={{ backgroundImage: `url(${expatPic})` }}>
         <HoverProject
           onMouseEnter={(e) => setTrainingBot(true)}
           onMouseLeave={(e) => setTrainingBot(false)}
