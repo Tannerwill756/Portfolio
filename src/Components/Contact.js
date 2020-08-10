@@ -3,15 +3,8 @@ import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import styles from "./HoverFx.module.scss";
 import { useInView } from "react-intersection-observer";
-import axios from "axios";
 
 export default function Contact() {
-  //form fields
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [content, setContent] = useState("");
-
   //form feedback
   const [success, setSuccess] = useState(false);
   const [fail, setFail] = useState(false);
@@ -21,14 +14,6 @@ export default function Contact() {
   const [ref, inView] = useInView({
     threshold: 0,
   });
-
-  const handelEmail = (succeeded) => {
-    if (succeeded) {
-      setSuccess(true);
-    } else {
-      setFail(true);
-    }
-  };
 
   return (
     <ContactWrapper>
