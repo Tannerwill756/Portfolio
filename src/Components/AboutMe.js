@@ -11,8 +11,6 @@ export default function AboutMe() {
   const [js, setJs] = useState(false);
   const [react, setReact] = useState(false);
   const [node, setNode] = useState(false);
-  const [uiDesign, setUiDesign] = useState(false);
-  const [adobe, setAdobe] = useState(false);
   const [git, setGit] = useState(false);
 
   //ref for page position
@@ -51,7 +49,7 @@ export default function AboutMe() {
               in the tech field. <br />
               <br />
               Over the past few years I was working full time jobs while
-              attending college pursing a bachelor's degree in Mechanical
+              attending college pursuing a bachelor's degree in Mechanical
               Engineering. I felt like I was running around in circles not
               getting anywhere. However, that's when I found my true passion in
               learning to create software.

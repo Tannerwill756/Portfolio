@@ -16,9 +16,10 @@ function CurrentlyLearning() {
       <div className={inView ? styles.fadeInText : styles.fadeOutText}>
         <ul ref={ref}>
           <li>AWS</li>
-          <li>Advanced Node JS Concepts</li>
           <li>Python</li>
           <li>Algorithms/Data Structures</li>
+          <li>GraphQL</li>
+          <li>Apollo</li>
         </ul>
       </div>
       {/* <p>And im EXTREMELY interested in learning just about ANYTHING!</p> */}

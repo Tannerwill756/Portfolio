@@ -188,20 +188,6 @@ export default function HeroSection() {
         >
           <i className="fab fa-twitter" />
         </a>
-        {/* <a
-          href="https://twitter.com/HessburgThomas"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <i className="fab fa-twitter" />
-        </a>
-        <a
-          href="https://www.facebook.com/tommy.hessburg"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <i className="fab fa-facebook-square" />
-        </a> */}
         <i
           onClick={(e) => {
             window.location.href = "mailto:Tannerwill756@gmail.com";
@@ -222,7 +208,6 @@ const HeroWrapper = styled.div`
   background-position: center;
   background-color: black;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
-  opactiy: 0.4;
 `;
 
 const Hero = styled.div`

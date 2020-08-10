@@ -6,15 +6,12 @@ import { useInView } from "react-intersection-observer";
 
 import BGImg from "../images/debut_light.png";
 import expatPic from "../images/expat.PNG";
-import TipEasePic from "../images/tipeasepic.png";
-import AppraisersBFF from "../images/appbff2.png";
-import Portfolio from "../images/codeimage4.jpeg";
+import coMake from "../images/coMake.PNG";
+import randChamp from "../images/randChamp.PNG";
 
 function Projects(props) {
   const [trainingBot, setTrainingBot] = useState(false);
   const [tipEase, setTipEase] = useState(false);
-  const [appBff, setAppBff] = useState(false);
-  const [portfolio, setPorfolio] = useState(false);
   const [doorman, setDoorman] = useState(false);
 
   const [ref, inView] = useInView({
@@ -28,11 +25,81 @@ function Projects(props) {
       </h2>
       <hr style={{ marginBottom: "60px" }} />
 
-      <Project style={{ backgroundImage: `url(${expatPic})` }}>
+      <Project style={{ backgroundImage: `url(${coMake})` }}>
         <HoverProject
           onMouseEnter={(e) => setTrainingBot(true)}
           onMouseLeave={(e) => setTrainingBot(false)}
           className={trainingBot ? styles.popoverHover : styles.popoverHoverOut}
+        >
+          <p>Check it out!</p>
+          <div>
+            <button
+              onClick={(e) =>
+                window.open(
+                  "https://github.com/lambda-comake/back-end",
+                  "_blank"
+                )
+              }
+            >
+              github
+            </button>
+            <button
+              onClick={(e) =>
+                window.open("https://co-make-fe.vercel.app/", "_blank")
+              }
+            >
+              live site
+            </button>
+          </div>
+        </HoverProject>
+        <ProjectCover>
+          <div>
+            <h3>Co-Make</h3>
+            <p>
+              An application that helps spread awareness of issues in your
+              community for your local government to see and prioritize.
+            </p>
+          </div>
+        </ProjectCover>
+      </Project>
+      <ProjectDiscription>
+        <p>
+          Co-Make was a project orginally planned to be built during one week, I
+          was the back-end developer and another student was the front-end
+          developer. Due to personal issues the front-end devolper never
+          finished his portion so in my free time I decided to build the
+          front-end from scratch and this is what you see here. Technologies
+          used: React/Redux, Node.js/Express, and PostgreSQL.
+        </p>
+        <MobileLinks>
+          <p>
+            github:{" "}
+            <a
+              href="https://github.com/Tannerwill756/front-end"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://github.com/Tannerwill756/front-end
+            </a>
+          </p>
+          <p>
+            live site:{" "}
+            <a
+              href="https://github.com/Tannerwill756/front-end"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://expat-journal-bw.vercel.app/
+            </a>
+          </p>
+        </MobileLinks>
+      </ProjectDiscription>
+
+      <Project style={{ backgroundImage: `url(${expatPic})` }}>
+        <HoverProject
+          onMouseEnter={(e) => setTipEase(true)}
+          onMouseLeave={(e) => setTipEase(false)}
+          className={tipEase ? styles.popoverHover : styles.popoverHoverOut}
         >
           <p>Check it out!</p>
           <div>
@@ -83,99 +150,27 @@ function Projects(props) {
           <p>
             github:{" "}
             <a
-              href="https://github.com/labs12-training-bot-2"
+              href="https://github.com/Tannerwill756/front-end"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://github.com/labs12-training-bot-2
+              https://github.com/Tannerwill756/front-end
             </a>
           </p>
           <p>
             live site:{" "}
             <a
-              href="https://github.com/labs12-training-bot-2"
+              href="https://expat-journal-bw.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://training-bot-2.netlify.com/
+              https://expat-journal-bw.vercel.app/
             </a>
           </p>
         </MobileLinks>
       </ProjectDiscription>
-
-      <Project style={{ backgroundImage: `url(${TipEasePic})` }}>
-        <HoverProject
-          onMouseEnter={(e) => setTipEase(true)}
-          onMouseLeave={(e) => setTipEase(false)}
-          className={tipEase ? styles.popoverHover : styles.popoverHoverOut}
-        >
-          <p>Check it out!</p>
-          <div>
-            <button
-              onClick={(e) =>
-                window.open(
-                  "https://github.com/lambda-build-tipsease",
-                  "_blank"
-                )
-              }
-            >
-              github
-            </button>
-            <button
-              onClick={(e) =>
-                window.open("https://tipease.netlify.com/", "_blank")
-              }
-            >
-              live site
-            </button>
-          </div>
-        </HoverProject>
-        <ProjectCover>
-          <div>
-            <h3>tipEase</h3>
-            <p>
-              An application that allows users to tip service workers directly!
-            </p>
-          </div>
-        </ProjectCover>
-      </Project>
-      <ProjectDiscription>
-        <p>
-          tipEase is an application that I built during my Lambda School back
-          end curriculum. The goal of the project was to simplify tipping in the
-          service industry by enabling customers to tip employees directly as
-          opposed to having to go through their employer. Collaborating with an
-          Android and React developer, I built the back end using
-          Node.js/Express with PostgreSQL in a four day development cycle. Due
-          to a personal emergency with our front end developer, our React
-          application wasn't built as intended. However, I took the mantle and
-          built the front end that you see here as well!
-          <MobileLinks>
-            <p>
-              github:{" "}
-              <a
-                href="https://github.com/lambda-build-tipsease"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://github.com/lambda-build-tipsease
-              </a>
-            </p>
-            <p>
-              live site:{" "}
-              <a
-                href="https://tipease.netlify.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://tipease.netlify.com/
-              </a>
-            </p>
-          </MobileLinks>
-        </p>
-      </ProjectDiscription>
       {/* new proj */}
-      <Project style={{ backgroundImage: `url(${Portfolio})` }}>
+      <Project style={{ backgroundImage: `url(${randChamp})` }}>
         <HoverProject
           onMouseEnter={(e) => setDoorman(true)}
           onMouseLeave={(e) => setDoorman(false)}
@@ -185,14 +180,17 @@ function Projects(props) {
           <div>
             <button
               onClick={(e) =>
-                window.open("https://github.com/notwrong/doorman", "_blank")
+                window.open(
+                  "https://github.com/Tannerwill756/LoL-random-champ-FE",
+                  "_blank"
+                )
               }
             >
               github
             </button>
             <button
               onClick={(e) =>
-                window.open("https://doorman.notwrong.dev/", "_blank")
+                window.open("https://lol-random-champ.vercel.app/", "_blank")
               }
             >
               live site
@@ -201,142 +199,40 @@ function Projects(props) {
         </HoverProject>
         <ProjectCover>
           <div>
-            <h3>Doorman</h3>
-            <p>An application to handel your Github repo invitations!</p>
+            <h3>Champion Generator</h3>
+            <p>
+              An application to help you choose which champion you want to play
+              for League of Legends!
+            </p>
           </div>
         </ProjectCover>
       </Project>
       <ProjectDiscription>
         <p>
-          Doorman is a project built over the course of 48 hours during Lambda
-          School's July 2019 Hackathon! If you frequently find yourself being
-          added to repositories as a collaborator, you know how tedious finding
-          and accepting the Github invite can be. We felt that too, and we built
-          this application to fix it!
+          Champion Generator was a fun 48 hour project built out by my brother
+          and myself. The back-end was built using Node.js/Express with a
+          PostgreSQL database, seeding all the data ourselves. The front-end
+          just uses react with css for styling.
         </p>
         <MobileLinks>
           <p>
             github:{" "}
             <a
-              href="https://github.com/notwrong/doorman"
+              href="https://github.com/Tannerwill756/LoL-random-champ-FE"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://github.com/notwrong/doorman
+              https://github.com/Tannerwill756/LoL-random-champ-FE
             </a>
           </p>
           <p>
             live site:{" "}
             <a
-              href="https://doorman.notwrong.dev/"
+              href="https://lol-random-champ.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://doorman.notwrong.dev/
-            </a>
-          </p>
-        </MobileLinks>
-      </ProjectDiscription>
-
-      <Project style={{ backgroundImage: `url(${AppraisersBFF})` }}>
-        <HoverProject
-          onMouseEnter={(e) => setAppBff(true)}
-          onMouseLeave={(e) => setAppBff(false)}
-          className={appBff ? styles.popoverHover : styles.popoverHoverOut}
-        >
-          <p>Check it out!</p>
-          <div>
-            <button
-              onClick={(e) =>
-                window.open(
-                  "https://github.com/appraiserbff-lambda-build-week",
-                  "_blank"
-                )
-              }
-            >
-              github
-            </button>
-            {/* <button>live site</button> */}
-          </div>
-        </HoverProject>
-        <ProjectCover>
-          <div>
-            <h3>AppraisersBFF</h3>
-            <p>
-              An application that uses machine learning and the Zillow API to
-              appraise your home!
-            </p>
-          </div>
-        </ProjectCover>
-      </Project>
-      <ProjectDiscription>
-        <p>
-          I built AppraiserBFF during my front end curriculum build week at
-          Lambda School. Similar to tipEase this was also a four day project,
-          though this time I worked alongside another front end developer. Also
-          on our team were 2 data scientists and a back end developer.
-          AppraiserBFF allows users to quickly query information about their
-          house through the Zillow API then use an algorithm from our data
-          scientists to estimate its value. Our front end tech stack included:
-          React, Redux, React Router, Connected Router, and Node-Sass.
-        </p>
-        <MobileLinks>
-          <p>
-            github:{" "}
-            <a
-              href="https://github.com/appraiserbff-lambda-build-week"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://github.com/appraiserbff-lambda-build-week
-            </a>
-          </p>
-        </MobileLinks>
-      </ProjectDiscription>
-
-      <Project style={{ backgroundImage: `url(${Portfolio})` }}>
-        <HoverProject
-          onMouseEnter={(e) => setPorfolio(true)}
-          onMouseLeave={(e) => setPorfolio(false)}
-          className={portfolio ? styles.popoverHover : styles.popoverHoverOut}
-        >
-          <p>Check it out!</p>
-          <div>
-            <button
-              onClick={(e) =>
-                window.open(
-                  "https://github.com/TomHessburg/My-Portfolio",
-                  "_blank"
-                )
-              }
-            >
-              github
-            </button>
-          </div>
-        </HoverProject>
-        <ProjectCover>
-          <div>
-            <h3>Portfolio</h3>
-            <p>
-              You're looking at it! Built using React with styled components.
-            </p>
-          </div>
-        </ProjectCover>
-      </Project>
-      <ProjectDiscription>
-        <p>
-          I had a LOT of fun writing this portfolio website. If youd like to
-          check out the code, feel free to take a look on github!
-        </p>
-        <MobileLinks>
-          <p>
-            github:{" "}
-            <a
-              href="https://github.com/TomHessburg/My-Portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://github.com/TomHessburg/My-Portfolio
+              https://lol-random-champ.vercel.app/
             </a>
           </p>
         </MobileLinks>

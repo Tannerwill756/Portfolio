@@ -71,84 +71,12 @@ export default function Contact() {
       )}
 
       <ContactMe>
-        <h3 className={inView ? styles.fadeInText : styles.fadeOutText}>
-          Contact me!
-        </h3>
-        <form
+        <h3
           ref={ref}
           className={inView ? styles.fadeInText : styles.fadeOutText}
-          onSubmit={(e) => {
-            e.preventDefault();
-            if (!name || !email || !content) {
-              setIncomplete(true);
-              return;
-            }
-
-            const newEmail = {
-              name,
-              email,
-              subject,
-              content,
-            };
-            axios
-              .post(
-                `${
-                  process.env.REACT_APP_DB_URL || "http://localhost:5000"
-                }/api/send-email`,
-                newEmail
-              )
-              .then((res) => {
-                setContent("");
-                setSubject("");
-                setName("");
-                setEmail("");
-
-                handelEmail(true);
-              })
-              .catch((err) => handelEmail(false));
-          }}
-          type="submit"
         >
-          <label>
-            name <span>*</span>
-          </label>
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            type="text"
-            placeholder="name"
-          />
-
-          <label>
-            e-mail <span>*</span>
-          </label>
-          <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type="text"
-            placeholder="e-mail"
-          />
-
-          <label>subject</label>
-          <input
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            type="text"
-            placeholder="subject"
-          />
-
-          <label>
-            content <span>*</span>
-          </label>
-          <textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            type="text"
-            placeholder="content"
-          />
-
-          <button type="submit">Submit</button>
-        </form>
+          Contact me!
+        </h3>
       </ContactMe>
       <p>email: Tannerwill756@gmail.com</p>
       <p>phone: (717)-856-6456</p>
@@ -207,6 +135,7 @@ const ContactMe = styled.div`
   align-items: flex-start;
   h3 {
     font-size: 35px;
+    margin: 0 auto;
   }
   form {
     width: 100%;
