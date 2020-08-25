@@ -219,7 +219,7 @@ const Hero = styled.div`
   h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
-    padding: 30vh 0 0 0;
+    padding: 18vh 0 0 0;
     margin: 0;
     font-size: 100px;
     animation: TEXT-FADE 2.5s ease;
